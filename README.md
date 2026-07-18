@@ -3,7 +3,6 @@
 ## Cloud Infrastructure & Linux Systems Engineer
 
 📍 Ferndown, Dorset  
-☎ 07436 818863  
 ✉ [jrwroberts1976@gmail.com](mailto:jrwroberts1976@gmail.com)
 
 ---
