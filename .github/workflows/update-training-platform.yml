@@ -7,12 +7,15 @@ on:
 
 jobs:
   notify-platform:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Trigger docker-env deployment
         env:
           TOKEN: ${{ secrets.REPO_DISPATCH_TOKEN }}
+
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
