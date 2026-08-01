@@ -1,0 +1,21 @@
+name: Update Training Platform
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify-platform:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger docker-env deployment
+        env:
+          TOKEN: ${{ secrets.REPO_DISPATCH_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${TOKEN}" \
+            https://api.github.com/repos/jrwroberts1976/docker-env/dispatches \
+            -d '{"event_type":"content-updated"}'
